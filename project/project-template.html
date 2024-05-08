@@ -19716,7 +19716,7 @@ class="
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
 <div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[97]:</div>
+<div class="jp-InputPrompt jp-InputArea-prompt">In&nbsp;[3]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
      <div class="CodeMirror cm-s-jupyter">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># The 3 hyperparameters we tuned with the kaggle score as the result</span>
@@ -19740,14 +19740,17 @@ class="
 <span class="c1">#0   WeightedEnsemble_L3  -36.732682  root_mean_squared_error       0.002530  106.656501                0.001029           0.036166            3       True         12</span>
 <span class="c1">#1    LightGBM_BAG_L2/T3  -36.891848  root_mean_squared_error       0.001163   91.102921                0.000329          15.665123            2       True          9</span>
 <span class="c1">#2    LightGBM_BAG_L2/T1  -37.059847  root_mean_squared_error       0.000999   91.284616                0.000166          15.846818            2       True          7</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
 
 <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
     <span class="s2">"model"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"initial"</span><span class="p">,</span> <span class="s2">"add_features"</span><span class="p">,</span> <span class="s2">"hpo"</span><span class="p">],</span>
-    <span class="s2">"hpo1"</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">2.193532</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.193532</span><span class="p">,</span> <span class="o">-</span><span class="mf">2.815309</span><span class="p">],</span>
-    <span class="s2">"hpo2"</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">30.323445</span><span class="p">,</span> <span class="o">-</span><span class="mf">30.549232</span><span class="p">,</span> <span class="o">-</span><span class="mf">31.106089</span><span class="p">],</span>
-    <span class="s2">"hpo3"</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">36.732682</span><span class="p">,</span> <span class="o">-</span><span class="mf">36.891848</span><span class="p">,</span> <span class="o">-</span><span class="mf">37.059847</span><span class="p">],</span>
+    <span class="s2">"hpo1"</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">2.193532</span><span class="p">,</span> <span class="o">-</span><span class="mf">30.323445</span><span class="p">,</span> <span class="o">-</span><span class="mf">36.732682</span><span class="p">],</span>
+    <span class="s2">"hpo2"</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">2.193532</span><span class="p">,</span> <span class="o">-</span><span class="mf">30.549232</span><span class="p">,</span> <span class="o">-</span><span class="mf">36.891848</span><span class="p">],</span>
+    <span class="s2">"hpo3"</span><span class="p">:</span> <span class="p">[</span><span class="o">-</span><span class="mf">2.815309</span><span class="p">,</span> <span class="o">-</span><span class="mf">31.106089</span><span class="p">,</span> <span class="o">-</span><span class="mf">37.059847</span><span class="p">],</span>
     <span class="s2">"score"</span><span class="p">:</span> <span class="p">[</span><span class="mf">1.79485</span><span class="p">,</span> <span class="mf">0.62099</span><span class="p">,</span> <span class="mf">0.47778</span><span class="p">]</span>
 <span class="p">})</span>
+<span class="c1">#.plot(x="model", y="score", figsize=(8, 6)).get_figure()</span>
+<span class="c1">#fig.savefig('model_train_score.png')</span>
 </pre></div>
 
      </div>
@@ -19765,7 +19768,7 @@ class="
 <div class="jp-OutputArea-child">
 
     
-    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[97]:</div>
+    <div class="jp-OutputPrompt jp-OutputArea-prompt">Out[3]:</div>
 
 
 
@@ -19800,23 +19803,23 @@ class="
       <th>0</th>
       <td>initial</td>
       <td>-2.193532</td>
-      <td>-30.323445</td>
-      <td>-36.732682</td>
+      <td>-2.193532</td>
+      <td>-2.815309</td>
       <td>1.79485</td>
     </tr>
     <tr>
       <th>1</th>
       <td>add_features</td>
-      <td>-2.193532</td>
+      <td>-30.323445</td>
       <td>-30.549232</td>
-      <td>-36.891848</td>
+      <td>-31.106089</td>
       <td>0.62099</td>
     </tr>
     <tr>
       <th>2</th>
       <td>hpo</td>
-      <td>-2.815309</td>
-      <td>-31.106089</td>
+      <td>-36.732682</td>
+      <td>-36.891848</td>
       <td>-37.059847</td>
       <td>0.47778</td>
     </tr>
