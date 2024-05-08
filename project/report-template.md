@@ -37,20 +37,12 @@ Two places:
 
 
 ### Create a table with the models you ran, the hyperparameters modified, and the kaggle score.
-|model|hpo1|hpo2|hpo3|score|
-|--|--|--|--|--|
-|initial|?|?|?|?|
-|add_features|?|?|?|?|
-|hpo|?|?|?|?|
+| model        | hpo1       | hpo2       | hpo3       | score   |
+|--------------|------------|------------|------------|---------|
+| initial      | -2.193532  | -2.193532  | -2.815309  | 1.79485 |
+| add_features | -30.323445 | -30.549232 | -31.106089 | 0.62099 |
+| hpo          | -36.732682 | -36.891848 | -37.059847 | 0.47778 |
 
-
-pd.DataFrame({
-    "model": ["initial", "add_features", "hpo"],
-    "hpo1": [-2.193532, -2.193532, -2.815309],
-    "hpo2": [-30.323445, -30.549232, -31.106089],
-    "hpo3": [-36.732682, -36.891848, -37.059847],
-    "score": [1.79485, 0.62099, 0.47778]
-})
 
 
 ### Create a line plot showing the top model score for the three (or more) training runs during the project.
